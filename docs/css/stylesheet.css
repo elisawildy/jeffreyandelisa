@@ -3,10 +3,6 @@ body {
 	background-color: white;
 }
 
-.logopic {
-	height: 80px;
-}
-
 .index_p {
 	color: white;
 	background-color: black;
@@ -16,6 +12,7 @@ body {
 	font-size: 18px;
 	font-family: arial, sans-serif;
 	margin-bottom: 10px;
+	text-align: left;
 }
 
 
