@@ -166,16 +166,6 @@ nav li a:hover {
 	background-color: #17c698;
 }
 
-.previous {
-	overflow: hidden;
-	float: left;
-}
-
-.next {
-	overflow: hidden;
-	float: right;
-}
-
 .previous a {
 	display: block;
 	color: white;
@@ -205,6 +195,16 @@ footer {
 	text-align: center;
 	margin: 10px;
 	color: black;
+}
+
+.portrait {
+    height: 80px;
+    width: 30px;
+}
+
+.landscape {
+    height: 30px;
+    width: 80px;
 }
 
 /*section {

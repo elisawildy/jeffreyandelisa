@@ -33,7 +33,7 @@
                     <h1>First Day of High School</h1>
                     <figure class="figure">
                         <figcaption class="col-sm-6 figure-caption">On the first day of high school, you walked in to the first class <i> late</i>. That day, I figured you were just a guy that was "too cool for school". However, you have turned out to be quite opposite. You're one of the harest working, smartest people I know, which are some of the many reasons I love you so much. I didn't know it on that first day, but you would become a huge part of my life. I thought this picture captured my first impression of you very well. Also, I'm wearing one of my many Lady Gaga shirts, the exact one I wore on that first day of school. You still remember me in that shirt with some zebra shorts on. A lot has changed for both of us since that first day.</figcaption>
-                        <img src="img/Year1/trampoline.jpg" class="figure-img img-fluid img-responsive col-xs-12 col-sm-6" alt="Trampoline">
+                        <img src="img/Year1/trampoline.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow cursor figure-img img-fluid img-responsive col-xs-12 col-sm-6" alt="Trampoline">
                     </figure>
                 </section>
             </div>
@@ -140,5 +140,45 @@
         <footer>
             <p>&copy J&E 2010</p>
         </footer>
+
+        <script>
+            function openModal() {
+              document.getElementById('myModal').style.display = "block";
+            }
+
+            function closeModal() {
+              document.getElementById('myModal').style.display = "none";
+            }
+
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("demo");
+              var captionText = document.getElementById("caption");
+              if (n > slides.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";
+              dots[slideIndex-1].className += " active";
+              captionText.innerHTML = dots[slideIndex-1].alt;
+            }
+        </script>
+
     </body>
 </html>
